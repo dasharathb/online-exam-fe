@@ -1,0 +1,127 @@
+.loading-container{
+	background-color: rgba(0,0,0, .4);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 9999;
+
+	.loader{
+		bottom: 0px;
+		left: 0px;
+		height:29px;
+		margin: auto;
+		position:absolute;
+		right: 0px;
+		top: 0px;
+		width:200px;
+
+
+		> div{
+			background-color:#fff;
+			height: 100%;
+			position:absolute;
+			top:0;
+			width: 15%;
+			-moz-animation-name:bounce-fading;
+			-moz-animation-duration:1.5s;
+			-moz-animation-iteration-count:infinite;
+			-moz-animation-direction:linear;
+			-moz-transform:scale(.3);
+			-webkit-animation-name:bounce-fading;
+			-webkit-animation-duration:1.5s;
+			-webkit-animation-iteration-count:infinite;
+			-webkit-animation-direction:linear;
+			-webkit-transform:scale(.3);
+			-ms-animation-name:bounce-fading;
+			-ms-animation-duration:1.5s;
+			-ms-animation-iteration-count:infinite;
+			-ms-animation-direction:linear;
+			-ms-transform:scale(.3);
+			animation-name:bounce-fading;
+			animation-duration:1.5s;
+			animation-iteration-count:infinite;
+			animation-direction:linear;
+			transform:scale(.3);
+
+			&:nth-child(1){
+				left:0;
+				.animation-delay(0.6s);
+			}
+
+			&:nth-child(2){
+				left:30px;
+				.animation-delay(0.75s);
+			}
+
+			&:nth-child(3){
+				left:60px;
+				.animation-delay(0.9s);
+			}
+
+			&:nth-child(4){
+				left:90px;
+				.animation-delay(1.05s);
+			}
+
+			&:nth-child(5){
+				left:120px;
+				.animation-delay(1.2s);
+			}
+
+			&:nth-child(6){
+				left:150px;
+				.animation-delay(1.35s);
+			}
+
+			&:nth-child(7){
+				left:180px;
+				.animation-delay(1.5s);
+			}
+
+			&:nth-child(8){
+				left:210px;
+				.animation-delay(1.65s);
+			}
+		}
+	}
+
+	@-moz-keyframes bounce-fading{
+		.loading-animation;
+	}
+
+	@-webkit-keyframes bounce-fading{
+		.loading-animation;
+	}
+
+	@-ms-keyframes bounce-fading{
+		.loading-animation;
+	}
+
+	@keyframes bounce-fading{
+		.loading-animation;
+	}
+
+	.loading-animation{
+		0%{
+			-moz-transform:scale(1);
+			-webkit-transform:scale(1);
+			transform:scale(1);
+            background-color:#067ab4;
+			/*background-color:#f37321;*/
+		}
+
+		100%{
+			-moz-transform:scale(.3);
+			-webkit-transform:scale(.3);
+			transform:scale(.3);
+			background-color:#FFFFFF;
+		}
+	}
+}
+
+.animation-delay(@delay){
+	-moz-animation-delay:@delay;
+	-webkit-animation-delay:@delay;
+	-ms-animation-delay:@delay;
+	animation-delay:@delay;
+}
