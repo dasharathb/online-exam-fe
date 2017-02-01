@@ -11,23 +11,21 @@
   </head>
   <body ng-app="htApp">
     <!-- Add your site or application content here -->
-    
-    <div class="site-wrapper">
-        <div class="page-wrapper footer-wrapper"> 
-       
-		<!--header here -->
-         <header-dtl></header-dtl>
-            <!-- Menu -->
-           <section id="js-scrollable" class="main-container" style="min-height:558px">
-           
-           
-               <div ng-view></div>
-               
-          </section>          
-     <!-- footer here-->
-     <footer-dtl></footer-dtl>
-	  </div>
-    </div>
+    <div class="">
+		<div class="site-wrapper" style="margin-bottom:30px;">
+			<div class="page-wrapper"> 
+		   
+			<!--header here -->
+			 <header-dtl></header-dtl>
+				<!-- Menu -->
+			   <section id="js-scrollable" class="main-container" >
+				   <div ng-view></div>               
+			  </section>          
+		 <!-- footer here-->
+		  </div>
+		</div>
+		<footer-dtl></footer-dtl>
+	</div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->

@@ -1,0 +1,8 @@
+node_modules
+dist
+war
+.tmp
+.sass-cache
+bower_components
+app/styles/
+app/scripts/configuration.js
