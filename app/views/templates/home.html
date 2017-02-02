@@ -55,6 +55,10 @@
               </button>                   
           </div>
       </div>
+      <div class="" style="width:2%; height:200px;display: inline-flex;align-items: center;">
+        <i class="glyphicon glyphicon-chevron-right " ng-show="rightLeft" ng-click="minimizeRightPan();"></i>
+        <i class="glyphicon glyphicon-chevron-left " ng-show="!rightLeft" ng-click="maxmizeRightPan();"></i>
+      </div>
       <div id="rightPan" class="pull-right" style="width:20%;">
           <div class="exImg">
             <img src="images/gana.jpg" height="100" width="100">  
@@ -121,9 +125,6 @@
               </div>
               </div>
       </div>
-      <!-- <div class="pull-right" style="width:2%; height:200px;display: flex;align-items: center;">
-        <i class="glyphicon glyphicon-chevron-right " ng-show="rightLeft" ng-click="minimizeRightPan();"></i>
-        <i class="glyphicon glyphicon-chevron-left " ng-show="!rightLeft" ng-click="maxmizeRightPan();"></i>
-      </div> -->
+      
     </div>
 </div>
