@@ -1,4 +1,4 @@
-/*! BUILD DATE: Thursday, February 2nd, 2017, 11:31:27 AM */
+/*! BUILD DATE: Thursday, February 9th, 2017, 10:50:00 AM */
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -7037,12 +7037,21 @@ html {
   display: inline-block;
   border-radius: 4px;
   margin: 1px;
-  border: 1px solid gray;
+  border: 1px solid #7f7985;
+  background-color: #7f7985;
   cursor: pointer;
 }
-.inptCells span.sld {
+.inptCells span.ans {
   color: #ffffff;
-  background-color: gray;
+  background-color: #28eb2e;
+}
+.inptCells span.notAns {
+  color: #ffffff;
+  background-color: red;
+}
+.inptCells span.ansForReview {
+  color: #ffffff;
+  background-color: #AB34DB;
 }
 .status-boxs {
   width: 2em;
@@ -7071,4 +7080,70 @@ html {
 }
 .disp_inline span {
   margin: 2px;
+}
+.text-center {
+  text-align: center;
+}
+#menu,
+#menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#menu div {
+  background: #E0F574;
+}
+#menu li {
+  float: left;
+  position: relative;
+  line-height: 2em;
+  width: 13em;
+}
+#menu li ul {
+  position: absolute;
+  margin-top: 0em;
+  margin-left: .5em;
+  display: none;
+}
+#menu ul li ul {
+  margin-top: 0em;
+  margin-left: 15em;
+}
+#menu a {
+  display: block;
+  border-right: 1px solid #fff;
+  background: #E0F574;
+  color: #3B3B3B;
+  text-decoration: none;
+  padding: 0 10px;
+}
+#menu a:hover {
+  background-color: #5798B4;
+  color: #fff;
+}
+#menu ul {
+  border-top: 1px solid #fff;
+}
+#menu ul a {
+  border-right: none;
+  border-right: 1px solid #fff;
+  border-bottom: -1px solid #ffffff;
+  border-left: 1px solid #fff;
+  background: #AEC245;
+}
+/* SHOW SUBMENU 1 */
+#menu li:hover ul,
+#menu li.over ul {
+  display: block;
+}
+#menu li:hover ul ul,
+#menu li.over ul ul {
+  display: none;
+}
+/* SHOW SUBMENU 2 */
+#menu ul li:hover ul,
+#menu ul li.over ul {
+  margin-left: 181px;
+  display: block;
+  margin-top: -23px;
 }

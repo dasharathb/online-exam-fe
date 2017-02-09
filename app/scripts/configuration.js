@@ -12,7 +12,8 @@
     },
     "endpoints": {
       "ht": {
-        "admin": "/admin"
+        "admin": "/admin",
+        "regUser": "/regUser"
       },
       "qPresence": {
         "presence": "/presence"

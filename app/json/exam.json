@@ -1,0 +1,708 @@
+[
+	{
+		"qNo":"1",
+		"question":"what is your name ?.",
+		"options":{
+			"a":"suma",
+			"b":"latha",
+			"c":"sumalatha",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"a"
+
+		}
+	},
+	{
+		"qNo":"2",
+		"question":"what is your father name ?.",
+		"options":{
+			"a":"reddy",
+			"b":"ramulu",
+			"c":"oooo",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"b"
+
+		}
+	},
+	{
+		"qNo":"3",
+		"question":"what is your mother name ?.",
+		"options":{
+			"a":"laxmi",
+			"b":"latha",
+			"c":"sumalatha",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"c"
+
+		}
+
+	},
+	{
+		"qNo":"4",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"5",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"6",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"7",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"8",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"9",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"10",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"11",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"12",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"13",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"14",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"15",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"16",
+		"question":"what is your name ?.",
+		"options":{
+			"a":"suma",
+			"b":"latha",
+			"c":"sumalatha",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"a"
+
+		}
+	},
+	{
+		"qNo":"17",
+		"question":"what is your father name ?.",
+		"options":{
+			"a":"reddy",
+			"b":"ramulu",
+			"c":"oooo",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"b"
+
+		}
+	},
+	{
+		"qNo":"18",
+		"question":"what is your mother name ?.",
+		"options":{
+			"a":"laxmi",
+			"b":"latha",
+			"c":"sumalatha",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"c"
+
+		}
+
+	},
+	{
+		"qNo":"19",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"20",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"21",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"22",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"23",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"24",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"25",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"26",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"27",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"28",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"29",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"30",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"31",
+		"question":"what is your name ?.",
+		"options":{
+			"a":"suma",
+			"b":"latha",
+			"c":"sumalatha",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"a"
+
+		}
+	},
+	{
+		"qNo":"32",
+		"question":"what is your father name ?.",
+		"options":{
+			"a":"reddy",
+			"b":"ramulu",
+			"c":"oooo",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"b"
+
+		}
+	},
+	{
+		"qNo":"33",
+		"question":"what is your mother name ?.",
+		"options":{
+			"a":"laxmi",
+			"b":"latha",
+			"c":"sumalatha",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"c"
+
+		}
+
+	},
+	{
+		"qNo":"34",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"35",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"36",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"37",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"38",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"39",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"40",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"41",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"42",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"43",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"44",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"45",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"46",
+		"question":"what is your name ?.",
+		"options":{
+			"a":"suma",
+			"b":"latha",
+			"c":"sumalatha",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"a"
+
+		}
+	},
+	{
+		"qNo":"47",
+		"question":"what is your father name ?.",
+		"options":{
+			"a":"reddy",
+			"b":"ramulu",
+			"c":"oooo",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"b"
+
+		}
+	},
+	{
+		"qNo":"48",
+		"question":"what is your mother name ?.",
+		"options":{
+			"a":"laxmi",
+			"b":"latha",
+			"c":"sumalatha",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"c"
+
+		}
+
+	},
+	{
+		"qNo":"49",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	},
+	{
+		"qNo":"50",
+		"question":"what is your surname ?.",
+		"options":{
+			"a":"bhukya",
+			"b":"eslavath",
+			"c":"none",
+			"d":"other"
+		},
+		"answer":{
+           "mark":"d"
+
+		}
+	}
+
+
+]

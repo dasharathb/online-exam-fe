@@ -6,7 +6,7 @@
             <img src="images/Information-icon.png" style="height: 17px;padding-left: 22px;">Instruction
             <img src="images/i.png" style="height: 17px;padding-left: 19px;">Question Paper
         </div>
-      </div>
+      </div> 
       <div class="" style="background-color: #cccccc;">
         <span class="pull-left">Section</span>
         <span class="pull-right">Time Lift:1:30</span>
@@ -24,33 +24,37 @@
           
           <div class="" style="border: 1px solid #c0c0c0; height: 416px;" >            
               <div style="overflow-y: scroll;overflow-x: hidden;height: 413px; ">
-                <div style="">Question 1</div>
+                <div style=""></div>
                 <hr>
-                      <b><div style="padding-left: 15px;"> What is your name ?</div></b><br>
+                      <b><div style="padding-left: 15px;">{{questionPaper.qNo}}. {{questionPaper.question}} </div></b><br>
                       <b><div class="row" style="padding-left: 15px;">
-                          <div class="col-lg-2">(A) suma</div>
-                          <div class="col-lg-2">(B) latha</div>
-                          <div class="col-lg-2">(C) reddy</div>
-                          <div class="col-lg-2">(D) laxmi</div>
+                          <div class="col-lg-2">(A) {{questionPaper.options.a}}</div>
+                          <div class="col-lg-2">(B) {{questionPaper.options.b}}</div>
+                          <div class="col-lg-2">(C) {{questionPaper.options.c}}</div>
+                          <div class="col-lg-2">(D) {{questionPaper.options.d}}</div>
                         </div>
                       </b>
                        
-                      <div style="padding-left: 15px; "><input type="radio" id="demo" >A</div><br>
-                      <div style="padding-left: 15px;"><input type="radio">B</div><br>
-                      <div style="padding-left: 15px;"><input type="radio">C</div><br>
-                      <div style="padding-left: 15px;"><input type="radio">D</div><br>
+                      <div style="padding-left: 15px; ">
+                        <input type="radio" name="ans" ng-model="ans" ng-change="answered();" ng-checked="questionPaper.ans == 'a'" value="a">A</div><br>
+                      <div style="padding-left: 15px;">
+                        <input type="radio" name="ans" ng-model="ans" ng-change="answered();" ng-checked="questionPaper.ans == 'b'" value="b">B</div><br>
+                      <div style="padding-left: 15px;">
+                        <input type="radio" name="ans" ng-model="ans" ng-change="answered();" ng-checked="questionPaper.ans == 'c'" value="c">C</div><br>
+                      <div style="padding-left: 15px;">
+                        <input type="radio" name="ans" ng-model="ans" ng-change="answered();" ng-checked="questionPaper.ans == 'd'" value="d">D</div><br>
 
               </div>            
           </div>
           
           <div class="" style="border: 1px solid #c0c0c0;" >            
-              <button class="btn btn-primary" ng-click="register();" 
-                style="font-size: 13px;background-color: transparent;color: black;margin-left: 11px;">
+              <button class="btn btn-primary" ng-click="markForReview(question+1);" 
+                style="font-size: 13px;background-color: transparent;color: black;margin-left: 11px; ">
                 Mark for Review & next
               </button>
               <button class="btn btn-primary" ng-click="clear();" 
                   style="font-size: 13px;background-color: transparent;color: black;">Clear Response</button>
-              <button class="btn btn-primary pull-right" ng-click="register();" style="font-size: 13px;">
+              <button class="btn btn-primary pull-right" ng-click="savenextQuestion(question+1);" style="font-size: 13px;">
                 Save&Next
               </button>                   
           </div>
@@ -60,10 +64,10 @@
         <i class="glyphicon glyphicon-chevron-left " ng-show="!rightLeft" ng-click="maxmizeRightPan();"></i>
       </div>
       <div id="rightPan" class="pull-right" style="width:20%;">
-          <div class="exImg">
+          <div class="text-center">
             <img src="images/gana.jpg" height="100" width="100">  
           </div>          
-          <div>
+          <div class="text-center">
             <label>Bhookya Ganapathi</label>
           </div>
             <div class="disp_inline">
@@ -96,24 +100,9 @@
                <div style="font-size: 12px;">Choose a Question</div> 
                 <div class="inptCells" style="overflow-y: scroll;overflow-x: hidden;height: 200px;">
         					<div>
-        						<span class="sld" ng-click="first()">1</span>
-        						<span class="sld">2</span>
-        						<span>3</span>
-        						<span>4</span>
-        						<span>5</span>
-        						<span>6</span>
-        						<span>7</span>
-        						<span>8</span>
-        						<span class="sld">9</span>
-        						<span>10</span>
-        						<span>11</span>
-        						<span class="sld">12</span>
-        						<span>13</span>
-        						<span>14</span>
-        						<span class="sld">15</span>
-        						<span>16</span>
-        						<span>17</span>
-        						<span class="sld">18</span>
+                      <span ng-repeat="qst in questionPapers" class="" ng-class="" id="ans{{qst.qNo}}" ng-click="qnoButtons(qst.qNo);">{{qst.qNo}}
+                      </span>
+
         					</div>
 					      </div>
               

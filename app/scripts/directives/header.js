@@ -8,6 +8,7 @@ angular.module('htApp')
 		},
 		restrict:'EA',
 		templateUrl:'views/templates/header.html',
+		controller:'onlineHeaderCntl',
 		replace:true,
 		link : function(scope, element, attrs){
 			console.log("this is header");

@@ -36,9 +36,24 @@ angular.module('htApp', [
         //$locationProvider.html5Mode(true); 
 
         $routeProvider
-        .when('/', {
+        .when('/onlineExam', {
+            templateUrl: 'views/templates/login.html',
+            controller: 'lCntrl',
+        })
+        .when('/exam', {
             templateUrl: 'views/templates/home.html',
             controller: 'homeCntr',
+            
+        })
+         .when('/', {
+            templateUrl: 'views/templates/onlineExam.html',
+            controller: 'onlineExameCntrl',
+            
+        })
+          .when('/registration', {
+            templateUrl: 'views/templates/registration.html',
+            controller: 'regCntrl',
+            
         })
         
         

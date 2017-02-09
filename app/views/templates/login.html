@@ -1,0 +1,42 @@
+<div class="row" style="background:#E0F574">
+<div class="col-lg-1"></div>
+<div class="col-lg-10">
+    <home-menu></home-menu>
+</div>
+<div class="col-lg-1"></div>
+</div>
+<center>
+<form style="margin-top: 138px;">
+		<fieldset style="border: 2px solid #7a7a61 !important;margin-top:25px;padding: 0.35em 0.625em 0.75em;background-color:#f1f2f3;border-radius: 4px;width: 381px;">
+		<div style="color:grey">
+	
+		<h3><u><center> Login</center></u></h3>
+		</div>
+          <div class="row" style="margin-bottom: 10px; margin-top:25px">
+			 <div class="col-lg-5" style="padding-left: 0px;">
+				<label class="lbl" style="padding-left: 67px;">User_Id :</label>
+			 </div>
+			 <div class="col-lg-6" >
+				<input type="text" name="userId" ng-model="userId" required>
+			 </div>
+		  </div>
+		  <div class="row">
+			 <div class="col-lg-5">
+				<span><label class="lbl" style="margin-left: 36px;"> Password :</label></span>
+			 </div>
+			 <div class="col-lg-6" >
+				<input type="password" name="password" ng-model="pwd" required minlength="4">
+			 </div>
+			</div>
+			<div>
+				<input type="button" ng-click="submit();" value="submit" style="margin-left: 140px;margin-top: 15px;margin-bottom:10px">
+			</div>
+
+			<label><a href="javascript:" style="padding-left: 138px;" ng-click="reg();">Create your Account ? </a></label>
+
+
+
+			
+		</fieldset>	
+		</form>
+		</center>
