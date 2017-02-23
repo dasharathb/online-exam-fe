@@ -1,0 +1,6 @@
+{
+	"admin":"/admin",
+	"regUser":"/regUser",
+	"login":"/login"
+	
+}

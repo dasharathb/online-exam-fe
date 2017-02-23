@@ -11,7 +11,7 @@ angular.module('htApp')
 			var defer = $q.defer();
 
 			//var serviceURI = './json/register.json';
-			var serviceURI = getServiceURI.build('htApp', 'regUser');
+			var serviceURI = getServiceURI.build('online', 'regUser');
 			console.log('serviceURI::::::::::::::::',serviceURI);
 			console.log(register);
 			$http({

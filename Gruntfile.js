@@ -24,19 +24,19 @@ module.exports = function (grunt) {
     warDist: 'war',
     dateTime: new Date().getTime(),
     local: {
-      serviceBE: '/home-tutions',
+      serviceBE: 'http://localhost:9030/online-exam-server',
       serviceQURI: 'https://presence.q.att.com'
     },
     dev: {
-      serviceBE: '/home-tutions', //need service uri for future plans
+      serviceBE: '/online-exam-server', //need service uri for future plans
       serviceQURI: 'https://presence.q.att.com'
     },
     qa: {
-      serviceBE: '/home-tutions',
+      serviceBE: '/online-exam-server',
       serviceQURI: 'https://presence.q.att.com'
     },
     prod: {
-      serviceBE: '/home-tutions',
+      serviceBE: '/online-exam-server',
       serviceQURI: 'https://presence.q.att.com'
     },
   };
@@ -372,11 +372,11 @@ module.exports = function (grunt) {
             debug: true,
             services: {
               uri: {
-                ht: '<%= yeoman.local.serviceBE %>',
+                online: '<%= yeoman.local.serviceBE %>',
                 qPresence: '<%= yeoman.local.serviceQURI %>'
               },
               endpoints: {
-                ht: grunt.file.readJSON('src/json/servicesHT.json'),
+                online: grunt.file.readJSON('src/json/servicesOnline.json'),
                 qPresence: grunt.file.readJSON('src/json/servicesQPresence.json')
               }
             }
@@ -392,7 +392,7 @@ module.exports = function (grunt) {
             name: 'development',
             services: {
               uri: {
-                ht: '<%= yeoman.dev.serviceBE %>'
+                online: '<%= yeoman.dev.serviceBE %>'
               }
             }
           }
@@ -404,7 +404,7 @@ module.exports = function (grunt) {
             name: 'qualityAssurance',
             services: {
               uri: {
-                ht: '<%= yeoman.qa.serviceBE %>'
+                online: '<%= yeoman.qa.serviceBE %>'
               }
             }
           }
@@ -417,7 +417,7 @@ module.exports = function (grunt) {
             debug: false,
             services: {
               uri: {
-                ht: '<%= yeoman.prod.serviceBE %>'
+                online: '<%= yeoman.prod.serviceBE %>'
               }
             }
           }

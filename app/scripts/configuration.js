@@ -7,13 +7,14 @@
   "debug": true,
   "services": {
     "uri": {
-      "ht": "/home-tutions",
+      "online": "http://localhost:9030/online-exam-server",
       "qPresence": "https://presence.q.att.com"
     },
     "endpoints": {
-      "ht": {
+      "online": {
         "admin": "/admin",
-        "regUser": "/regUser"
+        "regUser": "/regUser",
+        "login": "/login"
       },
       "qPresence": {
         "presence": "/presence"
