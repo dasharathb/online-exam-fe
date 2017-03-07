@@ -1,19 +1,19 @@
 'use strict';
 angular.module('htApp')
-.factory('examFact',['$http','$q','$location','getServiceURI',function($http,$q,$location,getServiceURI){
-	var examFact = {};
-	examFact.getExamPaper=function(emailId){
+.factory('viewPaperFact',['$http','$q','$location','getServiceURI',function($http,$q,$location,getServiceURI){
+	var viewPaperFact = {};
+	viewPaperFact.getPapers=function(view){
 
 
 		var defer = $q.defer();
-		var serviceURI = getServiceURI.build('online', 'getPaper');
+		var serviceURI = getServiceURI.build('online', 'viewPaper');
 		//var serviceURI = "./../../json/exam.json";
 
 		$http({
 				method: 'GET',
 				url: serviceURI,
 				params:{
-					emailId:emailId
+					papers:view
 				}
 			}).then(function(data){
 				defer.resolve(data.data);
@@ -27,6 +27,6 @@ angular.module('htApp')
 		};
 	
 
-	return examFact;
+	return viewPaperFact;
 
 }]);

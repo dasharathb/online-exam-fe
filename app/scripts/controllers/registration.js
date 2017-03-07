@@ -4,6 +4,7 @@ angular.module('htApp')
 	function($scope,$location,regFactory){
 		console.log('reg controller');
 
+
 		$scope.pswMatch=false;
 	   $scope.confirmPassword = function(){
 		console.log($scope.password ,'::::::$scope.confirmpassword :::::: ',$scope.confirmpassword);
@@ -58,9 +59,13 @@ angular.module('htApp')
         regFactory.getRegDetailes(register).then(function(response){
         	console.log('response:::::::::::',response);
         	$scope.msg= response.message;
+        	console.log('response:::::::::::',$scope.msg);
         	//console.log('response:::::11111111111111::::::',$scope.msg.indexOf('already'));
-        	if($scope.msg.indexOf('seccessfully')>=1){
-        		$location.path('/regSucessPage/'+$scope.msg);
+        	if($scope.msg.indexOf('seccessfully')>=0){
+        		$location.path('/registrationStatus/'+$scope.msg);
+        	}
+        	else{
+        		$location.path('/registration');
         	}
 
         });

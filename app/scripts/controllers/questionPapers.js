@@ -1,0 +1,12 @@
+'use strict';
+angular.module('htApp')
+.controller('qpCntrl',['$scope','$location','viewPaperFact','$routeParams',
+	function($scope,$location,viewPaperFact,$routeParams){
+		console.log('11111111111111111aaaaaaaaaaaaaaaaaa');
+		console.log('ad1.......',$routeParams.view);
+		$scope.examName=$routeParams.view;
+
+
+		
+
+}]);

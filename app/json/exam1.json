@@ -1,0 +1,27 @@
+[
+	{
+		"qNo":"1",
+		"question":"what is your name ?.",
+		"options":{
+			"a":"suma",
+			"b":"latha",
+			"c":"sumalatha",
+			"d":"other"
+		},
+		"answer":"a"
+	},
+	{
+		"qNo":"2",
+		"question":"what is your father name ?.",
+		"options":{
+			"a":"reddy",
+			"b":"ramulu",
+			"c":"oooo",
+			"d":"other"
+		},
+		"answer":"b"
+
+		
+	}
+
+]

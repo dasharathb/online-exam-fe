@@ -55,7 +55,31 @@ angular.module('htApp', [
             controller: 'regCntrl',
             
         })
-        
+         .when('/registrationStatus/:msg', {
+            templateUrl: 'views/templates/registrationStatus.html',
+            controller: 'regSucCntrl',
+            
+        })
+        .when('/admin', {
+        templateUrl: 'views/templates/admin.html',
+        controller: 'adminCntrl',
+            
+        })
+         .when('/newPaper', {
+        templateUrl: 'views/templates/newQuestionPaper.html',
+        controller: 'newPaperCntrl',
+            
+        })
+         .when('/qpapers/:view', {
+        templateUrl: 'views/templates/questionPapers.html',
+        controller: 'qpCntrl',
+            
+        })
+          .when('/result/:marks/:examName', {
+        templateUrl: 'views/templates/result.html',
+        controller: 'resultCntrl',
+            
+        })
         
         .otherwise({
             redirectTo: '/error'

@@ -12,7 +12,8 @@ angular.module('htApp')
 	$scope.submit = function(){
 		console.log('aaaaaaaaaaaa');
 	    var login ={};
-		login.email=$scope.email;
+	    $rootScope.email=$scope.email;
+		login.email=$rootScope.email;
 		login.password=$scope.pwd;
 		console.log('login::::',login);
 
@@ -24,37 +25,24 @@ angular.module('htApp')
 			//$rootScope.userId = $scope.loginDetails.userId;
 
 			//console.log('rootScope ::::::::::::',$rootScope.isLoggedIn);
+			
+
+		loginFact.getLoginDetails(login).then(function(data){
+			console.log('controller data ::::: ',data);
+			$scope.loginDetails= data;
+			$rootScope.isAdmin = data.isAdmin;
 			if($rootScope.fromGotoExm == true){
 				$location.path('/exam');
 			}else{
 				$location.path('/');
 			}
-
-		loginFact.getLoginDetails(login).then(function(data){
-				console.log('controller data ::::: ',data);
-				$scope.loginDetails= data;
 				//console.log('user........',$scope.loginDetails.userId);
-			});
+		});
 
 
 	
      }
-    /*$scope.getLogin = function(){
-			loginFact.getLoginDetails(login).then(function(data){
-				console.log('controller data ::::: ',data);
-				$scope.loginDetails= data;
-				console.log('user........',$scope.loginDetails.userId);
-
-				
-			});
-		}
-
-
-
-    $scope.init = function(){
-			$scope.getLogin();
-		}	
-	$scope.init();*/
+   
 
 
 

@@ -1,89 +1,158 @@
 'use strict';
 angular.module('htApp')
-.controller('homeCntr',['$scope','$location','examFact',
-	function($scope,$location, examFact){
+.controller('homeCntr',['$scope','$location','examFact','examStatusFact','$rootScope', '$interval',
+	function($scope,$location, examFact,examStatusFact,$rootScope, $interval){
 		$scope.rightLeft =true;
 		$scope.questionPapers=[];
 		$scope.questionPaper={};
 		$scope.question = 0;
-		$scope.mark = 0;
+		$scope.marks= 0;
 		$scope.ans = undefined;
 
+		$scope.mins = 10;
+		$scope.hrs=60;
+        
+        var stop;
+        $scope.min = function() {
+          // Don't start a new fight if we are already fighting
+          if ( angular.isDefined(stop) ) return;
+
+          stop = $interval(function() {
+            if ($scope.mins > 0 ) {
+              $scope.mins = $scope.mins - 1;             
+            } else {
+              $scope.stopFight();
+            }
+          }, 60000);
+        };
+        $scope.min();
+
+        $scope.hour = function() {
+          // Don't start a new fight if we are already fighting
+          if ( angular.isDefined(stop) ) return;
+
+          stop = $interval(function() {
+            if ($scope.hrs > 0 ) {
+              $scope.hrs = $scope.hrs - 1;             
+            } else {
+              $scope.stopFight();
+            }
+          }, 60000);
+        };
+        $scope.hour();
+        
+
+
+        $scope.stopFight = function() {
+          if (angular.isDefined(stop)) {
+            $interval.cancel(stop);
+            stop = undefined;
+          }
+        };
+
 		$scope.getExamPaper = function(){
-			examFact.getExamPaper().then(function(data){
+			examFact.getExamPaper($rootScope.email).then(function(data){
 				console.log('controller data ::::: ',data);
 				$scope.questionPapers = data;
+				$scope.examName = $scope.questionPapers.id;
+				console.log("questionPapers.......",$scope.questionPapers);
 				$scope.question = 0;
-				$scope.questionPaper = $scope.questionPapers[$scope.question];
-				$scope.answer=$scope.questionPaper.answer.mark;
-				console.log('json answer :::::::',$scope.answer);
+				$scope.questionPaper = $scope.questionPapers.questions[$scope.question];
+				console.log("getExamPaper...........",$scope.questionPaper);
 
 			});
 		}
 		$scope.qnoButtons = function(qno){
 			console.log('this is answer button',qno);
-			$scope.questionPaper = $scope.questionPapers[qno-1];
+			$scope.questionPaper = $scope.questionPapers.questions[qno-1];
 			//$scope.ans = $scope.answers[qno-1];
 			$scope.question = qno-1;
 		}
 
 		//$scope.answers=[];
 		$scope.savenextQuestion = function(qno){
-			console.log(':::',$scope.question ,' <', $scope.questionPapers.length-1);
-			if ($scope.question < ($scope.questionPapers.length-1) ) {
-						
-				if($scope.ans == undefined && $scope.questionPapers[$scope.question].ans == undefined){
+			console.log(":::::>>>>",qno,$scope.ans);
+			console.log(':::',$scope.question ,' <', $scope.questionPapers.questions.length-1);
+			if (parseInt($scope.question) < parseInt($scope.questionPapers.questions.length-1) ) {
+				console.log('....',$scope.questionPapers.questions[$scope.question]);		
+				if($scope.ans == undefined && $scope.questionPapers.questions[$scope.question].ans == undefined){
 					$('#ans'+qno).addClass('notAns');					
 				}else {
 					$('#ans'+qno).removeClass('notAns');
 					$('#ans'+qno).addClass('ans');
+					if($scope.ans==$scope.questionPaper.answer){
+						console.log($scope.ans,$scope.questionPaper.answer)
+						$scope.marks=$scope.marks+1;
+						console.log("marks::::",$scope.marks);
+					}
+					else{
+						console.log("no marks");
+					}
+
 			
 				}
-				if($scope.questionPapers[$scope.question].ans == undefined){
-					$scope.questionPapers[$scope.question].ans = $scope.ans;
+
+				if($scope.questionPapers.questions[$scope.question].ans == undefined){
+					$scope.questionPapers.questions[$scope.question].ans = $scope.ans;
 				}
+
 					
 				$scope.question = $scope.question+1;
-				$scope.questionPaper = $scope.questionPapers[$scope.question];
+				$scope.questionPaper = $scope.questionPapers.questions[$scope.question];
 				$scope.ans = undefined;
 
-			}else if($scope.question == ($scope.questionPapers.length-1)){
-				console.log(qno,'::::last ::: ',$scope.ans);
-				if($scope.ans == undefined  && $scope.questionPapers[$scope.question].ans == undefined){
+			}else if($scope.question == ($scope.questionPapers.questions.length-1)){
+				console.log(qno,'::::last ::: ',$scope.ans,$scope.questionPapers.questions[$scope.question].ans);
+				if($scope.ans == undefined  && $scope.questionPapers.questions[$scope.question].ans == undefined){
 					$('#ans'+qno).addClass('notAns');
 				}else{
 					$('#ans'+qno).removeClass('notAns')
 					$('#ans'+qno).addClass('ans');
+					if($scope.ans==$scope.questionPaper.answer){
+						console.log($scope.ans,$scope.questionPaper.answer)
+						$scope.marks=$scope.marks+1;
+						console.log("marks::::",$scope.marks);
+					}
+					else{
+						console.log("no marks");
+						
+					}
+
 				}
-				if($scope.questionPapers[$scope.question].ans == undefined){
-					$scope.questionPapers[$scope.question].ans = $scope.ans;
+				if($scope.questionPapers.questions[$scope.question].ans == undefined){
+					$scope.questionPapers.questions[$scope.question].ans = $scope.ans;
 				}
 			}
+			
+
 		}
 		$scope.markForReview = function(qno){
 			console.log('aaaaaaaaaaaaaaa');
-			if ($scope.question < ($scope.questionPapers.length-1) ) {
+			if (parseInt($scope.question) < parseInt($scope.questionPapers.questions.length-1) ) {
 				$scope.question = $scope.question+1;
-				$scope.questionPaper = $scope.questionPapers[$scope.question];
+				$scope.questionPaper = $scope.questionPapers.questions[$scope.question];
 				console.log("$scope.ans :::::::::: ",$scope.ans);
 				if($scope.ans == undefined){
 					$('#ans'+qno).addClass('notAns');
 				}else{
+					$('#ans'+qno).removeClass('notAns');
 					$('#ans'+qno).addClass('ansForReview');
 
 				}
-			}else if($scope.question == ($scope.questionPapers.length-1)){
+			}else if($scope.question == ($scope.questionPapers.questions.length-1)){
 				console.log(qno,'::::last ::: ',$scope.ans);
-				if($scope.ans == undefined){
+				if($scope.ans == undefined ){
 					$('#ans'+qno).addClass('notAns');
 				}else{
-					$('#ans'+qno).removeClass('notAns');
+				    
+				    
+				    $('#ans'+qno).removeClass('notAns')
 					$('#ans'+qno).addClass('ans');
-				}
-			
+
+				} 
 			}
 			
-             $scope.ans = undefined;
+           $scope.ans = undefined;
 		}
 
 		$scope.clear=function(qno){
@@ -104,8 +173,25 @@ angular.module('htApp')
 				
 		$scope.answered = function(qno){
 			console.log('student answer ::::::::',$scope.ans);
+			$rootScope.urAns=$scope.ans;
+			
 			//console.log($('#ans'+qno));
 			
+		}
+		$scope.submit=function(emailId){
+			var examStatus = {};
+			$scope.status="completed";
+			examStatus.emailId=emailId;
+			examStatus.examName=$scope.examName;
+            examStatus.status=$scope.status;
+            console.log("email.....",examStatus);
+            examStatusFact.saveStatus(examStatus).then(function(data){
+            	$location.path('/result/'+$scope.marks+'/'+$scope.examName);
+
+            });
+
+
+
 		}	
 
 

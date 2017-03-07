@@ -1,0 +1,56 @@
+<div class="row" style="background:#E0F574">
+    <home-menu is-admin="{{isAdmin}}"></home-menu>
+</div>
+<div class="row">
+	<div class="col-lg-6" style="font-size: 18px;padding-left: 251px;margin-top: 26px;">New Question Paper</div>
+	<div class="col-lg-6" style="font-size: 18px;margin-top: 26px;padding-left: 236px;">No.of Questions:{{qCount}}</div>
+</div>
+<div class="container-fluid">
+<div class="row">
+	<div class="col-lg-2"></div>
+	<div class="col-lg-8 main-body-container">
+		<div style="color:grey">
+     	</div>
+	 	<form>
+			<fieldset class="fieldset" style="height: 344px;">
+		  		<div><label>Q:</label><textarea style="width: 98%;height: 66px" ng-model="question" id="textId"></textarea></div>
+		  		<div><label style="margin-top: 16px;">Options:</label></div>
+		  		<div style="margin-left: 89px;"><label>A:</label><textarea style="padding-left: 83px;width: 43%;height: 26px;" ng-model="a" id="textId1"></textarea></div>
+		  		<div  style="margin-left: 89px;margin-top: 10px;"><label>B:</label><textarea style="padding-left: 83px;width: 43%;height: 26px;" ng-model="b" id="textId2"></textarea></div>
+		  		<div  style="margin-left: 89px;margin-top: 10px;"><label>C:</label><textarea style="padding-left: 83px;width: 43%;height: 26px;" ng-model="c" id="textId3"></textarea></div>
+		  		<div  style="margin-left: 89px;margin-top: 10px;"><label>D:</label><textarea style="padding-left: 83px;width: 43%;height: 26px;" ng-model="d" id="textId4"></textarea></div>
+		  		<div style="margin-top: 10px;"><label>Actual Answer:</label><input type="text" name="t1" style="width: 317px;" ng-model="actualAns" id="textId5"></div>
+		  		<div>
+					<input type="button" ng-click="AddMoreQuestion();" value="Add More Questions" style="margin-left: 105px;margin-top: 15px;margin-bottom:10px">
+					<input type="button" ng-click="submitqno();" value="Submit Paper" style="margin-left: 63px;margin-top: 15px;margin-bottom:10px">
+
+              <div id="confirmModal" class="modal fade" style="top: 100px;" aria-hidden="true" role="dialog">
+     		<div class="modal-dialog">
+        		<div class="modal-content">
+
+            		<div class="modal-header"> 
+                		<button class="close" type="button" data-ng-click="close();" data-ng-disabled="confirmModel.$invalid">
+                    		<span aria-hidden="true">X</span>
+                		</button>
+            		</div>
+
+
+            		<div class="modal-body">
+            			Are you sure to save {{qCount}} Questions
+            			
+            		</div>	
+            		<div class="modal-footer">
+                		<input type="button" class="btn btn-primary" data-ng-click="submit()" data-ng-disabled="confirmModel.$invalid" value="ok">
+            		</div>
+        		</div>
+        	</div>
+		</div>
+
+
+				</div>
+			</fieldset>
+		</form>	
+	 </div>	
+	 <div class="col-lg-2"></div>
+	</div>
+</div>

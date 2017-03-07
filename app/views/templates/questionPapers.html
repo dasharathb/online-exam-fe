@@ -1,0 +1,30 @@
+<div class="row" style="background:#E0F574">
+    <home-menu is-admin="{{isAdmin}}"></home-menu>
+</div>
+<div class="col-lg-1"></div>
+  <div class="col-lg-10 main-body-container">
+  <form>
+    <fieldset class="fieldset">
+      <div style="overflow-y: scroll;overflow-x: hidden;">
+                
+                <hr> 
+                <center><div style="align-items: center;color: blue;font-size: x-large;    margin-bottom: 15px;">Paper Name:{{examName}}</div></center>
+
+                   <div ng-repeat="qs in questionPaper">
+                         <b><div style="padding-left: 15px;" style="margin-bottom: 10px">{{qs.qNo}}. {{qs.question}} </div></b><br>
+                        <div class="row" style="padding-left: 15px;">
+                          <div class=""  style="margin-bottom: 4px">(A) {{qs.options.a}}</div>
+                          <div class=""  style="margin-bottom: 4px">(B) {{qs.options.b}}</div>
+                          <div class=""  style="margin-bottom: 4px">(C) {{qs.options.c}}</div>
+                          <div class=""  style="margin-bottom: 7px">(D) {{qs.options.d}}</div>
+                        </div>
+                        <div style="color:red;padding-left: 34px;">Ans:{{qs.answer}}</div>
+                      
+                      </div>
+            </div>
+            </fieldset>
+            </form> 
+       </div>
+    <div class="col-lg-1"></div>   
+                       
+        

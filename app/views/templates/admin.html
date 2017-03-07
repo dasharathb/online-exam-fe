@@ -1,0 +1,41 @@
+<div class="row" style="background:#E0F574">
+    <home-menu is-admin="{{isAdmin}}"></home-menu>
+</div>
+<div class="container-fluid">
+<div class="row">
+	<div class="col-lg-2"></div>
+	<div class="col-lg-8 main-body-container">
+		<div style="color:grey">
+			<h3><u><center> Admin Details </center></u></h3>
+     	</div>
+	 	<form>
+			<fieldset class="fieldset" style="height: 344px;">
+		  		<div style="padding-top: 10px;"><a href="javascript:" ng-click="newPaper();">New Question Paper</a></div>
+			
+
+            <div>
+				<table  style="width:100%;background-color: lightskyblue" class="table table-bordered table-striped table-hover">
+ 					<thead>
+ 						<tr>
+   				 			<th>S.no</th>
+    			 			<th>QuestionPaper-Id</th>
+   				 			
+ 			 			</tr>
+  						</thead>
+  						<tbody>
+              				<tr ng-repeat = "papers in questionPaperNo" >
+    							<td>{{$index+1}}</td>
+    							<td><a ng-href="javascript:" ng-click="viewPaper(papers.id);">{{papers.id}}</a></td>
+    						</tr>
+  						</tbody>
+
+  					</table>	
+				</div>
+
+			</fieldset>
+		</form>	
+	 </div>	
+	 <div class="col-lg-2"></div>
+	</div>
+</div>
+	

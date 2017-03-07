@@ -9,7 +9,10 @@
       </div> 
       <div class="" style="background-color: #cccccc;">
         <span class="pull-left">Section</span>
-        <span class="pull-right">Time Lift:1:30</span>
+        <span class="pull-right">Time Lift:
+
+       <timer interval="1000">{{hours}} hour{{hoursS}}, {{minutes}} minute{{minutesS}}, {{seconds}} second{{secondsS}}.{{hrs}} {{mins}}</timer>
+        </span>
       </div>
       <div class="" style="border: 1px solid #c0c0c0; clear:both;">
             <mor-menu> </mor-menu>
@@ -23,18 +26,21 @@
           <div class="" style="background-color:#85C1E9;height: 1.5em;"></div>
           
           <div class="" style="border: 1px solid #c0c0c0; height: 416px;" >            
-              <div style="overflow-y: scroll;overflow-x: hidden;height: 413px; ">
-                <div style=""></div>
-                <hr>
-                      <b><div style="padding-left: 15px;">{{questionPaper.qNo}}. {{questionPaper.question}} </div></b><br>
-                      <b><div class="row" style="padding-left: 15px;">
-                          <div class="col-lg-2">(A) {{questionPaper.options.a}}</div>
-                          <div class="col-lg-2">(B) {{questionPaper.options.b}}</div>
-                          <div class="col-lg-2">(C) {{questionPaper.options.c}}</div>
-                          <div class="col-lg-2">(D) {{questionPaper.options.d}}</div>
+              <div style="overflow-y: scroll;overflow-x: hidden;">
+                
+                <hr> 
+                       <div>
+                         <div>
+                         <b><div style="padding-left: 15px;">{{questionPaper.qNo}}. {{questionPaper.question}} </div></b><br>
+                        <div class="row" style="padding-left: 15px; ">
+                          <div class="" style="margin-bottom: 4px">(A) {{questionPaper.options.a}}</div>
+                          <div class="" style="margin-bottom: 4px">(B) {{questionPaper.options.b}}</div>
+                          <div class="" style="margin-bottom: 4px">(C) {{questionPaper.options.c}}</div>
+                          <div class="" style="margin-bottom: 10px">(D) {{questionPaper.options.d}}</div>
                         </div>
-                      </b>
-                       
+                      
+                      </div>
+                      </div>                       
                       <div style="padding-left: 15px; ">
                         <input type="radio" name="ans" ng-model="ans" ng-change="answered();" ng-checked="questionPaper.ans == 'a'" value="a">A</div><br>
                       <div style="padding-left: 15px;">
@@ -98,9 +104,10 @@
             </div>
             <div class="" style="background-color:#85C1E9;">  GA(General Aptitude) </div>
                <div style="font-size: 12px;">Choose a Question</div> 
-                <div class="inptCells" style="overflow-y: scroll;overflow-x: hidden;height: 200px;">
+                <div class="inptCells" style="overflow-y: scroll;overflow-x: hidden;height: 180px;">
         					<div>
-                      <span ng-repeat="qst in questionPapers" class="" ng-class="" id="ans{{qst.qNo}}" ng-click="qnoButtons(qst.qNo);">{{qst.qNo}}
+                      <span ng-repeat="qst in questionPapers.questions " class="" ng-class="" id="ans{{qst.qNo}}" 
+                        ng-click="qnoButtons(qst.qNo);">{{qst.qNo}}
                       </span>
 
         					</div>
@@ -108,7 +115,7 @@
               
              <div class="row">
                 <center>
-                  <button class="btn btn-primary" ng-click="register();" style="font-size: 13px;margin-top: 4px;">Submit</button>
+                  <button class="btn btn-primary" ng-click="submit(email);" style="font-size: 13px;margin-top: 4px;">Submit</button>
 
                 </center>
               </div>

@@ -1,3 +1,4 @@
+
 [
 	{
 		"qNo":"1",
@@ -8,7 +9,10 @@
 			"c":"sumalatha",
 			"d":"other"
 		},
-		"answer":"a"
+		"answer":{
+           "mark":"a"
+
+		}
 	},
 	{
 		"qNo":"2",
@@ -19,7 +23,10 @@
 			"c":"oooo",
 			"d":"other"
 		},
-		"answer":"b"
+		"answer":{
+           "mark":"b"
+
+		}
 	},
 	{
 		"qNo":"3",
@@ -30,8 +37,10 @@
 			"c":"sumalatha",
 			"d":"other"
 		},
-		"answer":"c"
+		"answer":{
+           "mark":"c"
 
+		}
 
 	},
 	{
@@ -43,9 +52,10 @@
 			"c":"none",
 			"d":"other"
 		},
-		"answer":"d"
+		"answer":{
+           "mark":"d"
 
-		
+		}
 	},
 	{
 		"qNo":"5",
@@ -56,9 +66,10 @@
 			"c":"none",
 			"d":"other"
 		},
-		"answer":"d"
+		"answer":{
+           "mark":"d"
 
-		
+		}
 	},
 	{
 		"qNo":"6",

@@ -1,9 +1,11 @@
 <div class="row" style="background:#E0F574">
 <div class="col-lg-1"></div>
 <div class="col-lg-10">
-    <home-menu></home-menu>
+    <home-menu is-admin="{{isAdmin}}"></home-menu>
 </div>
-<div class="col-lg-1"></div>
+<div class="col-lg-1">
+	
+</div>
 </div>
 <center>
 <form style="margin-top: 138px;">
@@ -14,7 +16,7 @@
 		</div>
           <div class="row" style="margin-bottom: 10px; margin-top:25px">
 			 <div class="col-lg-5" style="padding-left: 0px;">
-				<label class="lbl" style="padding-left: 67px;">User_Id/Email :</label>
+				<label class="lbl" style="padding-left: 27px;">User_Id/Email :</label>
 			 </div>
 			 <div class="col-lg-6" >
 				<input type="email" name="email" ng-model="email" required>

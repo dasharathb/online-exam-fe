@@ -14,7 +14,12 @@
       "online": {
         "admin": "/admin",
         "regUser": "/regUser",
-        "login": "/login"
+        "login": "/login",
+        "qPaper": "/saveQuestions",
+        "getPaper": "/getPaper",
+        "viewPaper": "/viewPaper",
+        "qpId": "/qpId",
+        "examStatus": "/examStatus"
       },
       "qPresence": {
         "presence": "/presence"
