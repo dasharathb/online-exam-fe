@@ -20,16 +20,40 @@ angular.module('htApp')
         	console.log(":::::::::::",view);
         	$location.path('/qpapers/'+view);
 
-        	viewPaperFact.getPapers(view).then(function(data){
-             	$scope.questionPapers = data;
-				$rootScope.examName = $scope.questionPapers.id;
 
-				console.log("questionPapers.......",$scope.examName);
-				$rootScope.questionPaper = $scope.questionPapers.questions;
-				console.log("getExamPaper...........",$rootScope.questionPaper);
-
-        	});
         }
+        $scope.createUserDetails=function(){
+        		console.log("::::::::::::::::::::::::;");
+        		$location.path('/registration');
+        	}
+        	$scope.RRB=function(){
+        		$scope.paper="RRB";
+        		console.log("::::::::::::::::::::::::;",$scope.paper);
+        		$location.path('/rrbPaper/'+$scope.paper);
+
+        	
+        	}
+        	$scope.SSC=function(){
+        		$scope.paper="SSC";
+        		console.log("::::::::::::::::::::::::;",$scope.paper);
+        		$location.path('/sscPaper/'+$scope.paper);
+
+        	
+        	}
+        	$scope.GATE=function(){
+        		$scope.paper="GATE";
+        		console.log("::::::::::::::::::::::::;",$scope.paper);
+        		$location.path('/gatePaper/'+$scope.paper);
+
+        	
+        	}
+        	$scope.BANK=function(){
+        		$scope.paper="BANK";
+        		console.log("::::::::::::::::::::::::;",$scope.paper);
+        		$location.path('/bankPaper/'+$scope.paper);
+
+        	
+        	}
 
 
 

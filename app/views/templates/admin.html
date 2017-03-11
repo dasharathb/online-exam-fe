@@ -9,11 +9,33 @@
 			<h3><u><center> Admin Details </center></u></h3>
      	</div>
 	 	<form>
-			<fieldset class="fieldset" style="height: 344px;">
-		  		<div style="padding-top: 10px;"><a href="javascript:" ng-click="newPaper();">New Question Paper</a></div>
+			<fieldset class="fieldset" style="    max-height: inherit;">
+      <label><a href="javascript:" style="padding-left: 138px;" ng-click="createUserDetails();">Create your Account ? </a></label>
+			    
+		  		<div style="padding-top: 10px; font-size: large;"><a href="javascript:" ng-click="newPaper();">Create new Question Paper</a></div>
+
+          <div style="padding-top: 10px;color: orangered;">view Technical/general/Arthematic/Reasoning Test the papers:</div>
+         <div>
+        <table  style="width:100%;background-color: lightskyblue" class="table table-bordered table-striped table-hover">
+          <thead>
+            <tr>
+                <th><a ng-href="#!/rrbId">RRB</a></th>
+                <th><a href="#!/sscId">SSC</a></th>
+                <th><a href="#!/gateId">GATE</a></th>
+                <th><a href="#!/bankId">BANK</a></th>
+                
+            </tr>
+              </thead>
+            </table>  
+
+      
+          </div>
+		  		
 			
+              <div style="padding-top: 10px;color: orangered;">view Grand Test papers:</div>
 
             <div>
+
 				<table  style="width:100%;background-color: lightskyblue" class="table table-bordered table-striped table-hover">
  					<thead>
  						<tr>

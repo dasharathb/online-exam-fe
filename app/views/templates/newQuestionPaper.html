@@ -1,6 +1,7 @@
 <div class="row" style="background:#E0F574">
     <home-menu is-admin="{{isAdmin}}"></home-menu>
 </div>
+<center><div style="margin-top: 31px;color: blue;font-size: xx-large;">{{paperName}} Paper</div></center>
 <div class="row">
 	<div class="col-lg-6" style="font-size: 18px;padding-left: 251px;margin-top: 26px;">New Question Paper</div>
 	<div class="col-lg-6" style="font-size: 18px;margin-top: 26px;padding-left: 236px;">No.of Questions:{{qCount}}</div>
@@ -13,6 +14,14 @@
      	</div>
 	 	<form>
 			<fieldset class="fieldset" style="height: 344px;">
+			   <div>
+			   <input type="radio" name="r1" ng-model="rrb" value="RRB">RRB
+			   <input type="radio" name="r1" ng-model="rrb" value="SSC">SSC
+			   <input type="radio" name="r1" ng-model="rrb" value="GATE">GATE
+			   <input type="radio" name="r1" ng-model="rrb" value="BANK">BANK
+			   	
+
+			   </div>
 		  		<div><label>Q:</label><textarea style="width: 98%;height: 66px" ng-model="question" id="textId"></textarea></div>
 		  		<div><label style="margin-top: 16px;">Options:</label></div>
 		  		<div style="margin-left: 89px;"><label>A:</label><textarea style="padding-left: 83px;width: 43%;height: 26px;" ng-model="a" id="textId1"></textarea></div>

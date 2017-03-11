@@ -10,15 +10,15 @@ angular.module('htApp')
 			console.log(":::::::::::",viewPaper);
         	$location.path('/qpapers/'+viewPaper);
 
-        	viewPaperFact.getPapers(viewPaper).then(function(data){
-             	$scope.questionPapers = data;
-				$rootScope.examName = $scope.questionPapers.id;
+    //     	viewPaperFact.getPapers(viewPaper).then(function(data){
+    //          	$scope.questionPapers = data;
+				// $rootScope.examName = $scope.questionPapers.id;
 
-				console.log("questionPapers.......",$scope.examName);
-				$rootScope.questionPaper = $scope.questionPapers.questions;
-				console.log("getExamPaper...........",$rootScope.questionPaper);
+				// console.log("questionPapers.......",$scope.examName);
+				// $rootScope.questionPaper = $scope.questionPapers.questions;
+				// console.log("getExamPaper...........",$rootScope.questionPaper);
 
-        	});
+    //     	});
 
 		}
 	

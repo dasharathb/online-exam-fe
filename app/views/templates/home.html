@@ -24,13 +24,14 @@
             <div class="pull-right" style="font-size: 12px; padding-left: 135px;">Mark for correct answer 1 | Negative answer 0.33</div>  
           </div>          
           <div class="" style="background-color:#85C1E9;height: 1.5em;"></div>
-          
-          <div class="" style="border: 1px solid #c0c0c0; height: 416px;" >            
+          <center>{{message}}</center>
+          <div ng-show="questionPaper" class="" style="border: 1px solid #c0c0c0; height: 416px;" >            
               <div style="overflow-y: scroll;overflow-x: hidden;">
                 
                 <hr> 
                        <div>
                          <div>
+                          
                          <b><div style="padding-left: 15px;">{{questionPaper.qNo}}. {{questionPaper.question}} </div></b><br>
                         <div class="row" style="padding-left: 15px; ">
                           <div class="" style="margin-bottom: 4px">(A) {{questionPaper.options.a}}</div>
@@ -53,7 +54,7 @@
               </div>            
           </div>
           
-          <div class="" style="border: 1px solid #c0c0c0;" >            
+          <div ng-show="questionPaper"  class="" style="border: 1px solid #c0c0c0;" >            
               <button class="btn btn-primary" ng-click="markForReview(question+1);" 
                 style="font-size: 13px;background-color: transparent;color: black;margin-left: 11px; ">
                 Mark for Review & next
@@ -65,11 +66,11 @@
               </button>                   
           </div>
       </div>
-      <div class="" style="width:2%; height:200px;display: inline-flex;align-items: center;">
+      <div  ng-show="questionPaper"  style="width:2%; height:200px;display: inline-flex;align-items: center;">
         <i class="glyphicon glyphicon-chevron-right " ng-show="rightLeft" ng-click="minimizeRightPan();"></i>
         <i class="glyphicon glyphicon-chevron-left " ng-show="!rightLeft" ng-click="maxmizeRightPan();"></i>
       </div>
-      <div id="rightPan" class="pull-right" style="width:20%;">
+      <div ng-show="questionPaper" id="rightPan" class="pull-right" style="width:20%;" >
           <div class="text-center">
             <img src="images/gana.jpg" height="100" width="100">  
           </div>          
@@ -113,7 +114,7 @@
         					</div>
 					      </div>
               
-             <div class="row">
+             <div class="row" ng-show="questionPaper">
                 <center>
                   <button class="btn btn-primary" ng-click="submit(email);" style="font-size: 13px;margin-top: 4px;">Submit</button>
 

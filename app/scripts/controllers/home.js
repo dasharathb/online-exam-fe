@@ -4,11 +4,11 @@ angular.module('htApp')
 	function($scope,$location, examFact,examStatusFact,$rootScope, $interval){
 		$scope.rightLeft =true;
 		$scope.questionPapers=[];
-		$scope.questionPaper={};
+		$scope.questionPaper;
 		$scope.question = 0;
 		$scope.marks= 0;
 		$scope.ans = undefined;
-
+$scope.examName;
 		$scope.mins = 10;
 		$scope.hrs=60;
         
@@ -53,12 +53,18 @@ angular.module('htApp')
 		$scope.getExamPaper = function(){
 			examFact.getExamPaper($rootScope.email).then(function(data){
 				console.log('controller data ::::: ',data);
-				$scope.questionPapers = data;
+				if(data != "" ){
+					$scope.questionPapers = data;
 				$scope.examName = $scope.questionPapers.id;
 				console.log("questionPapers.......",$scope.questionPapers);
 				$scope.question = 0;
 				$scope.questionPaper = $scope.questionPapers.questions[$scope.question];
-				console.log("getExamPaper...........",$scope.questionPaper);
+				console.log("getExamPaper...........",$scope.questionPaper);	
+				$scope.message = "";
+				}else{
+					$scope.message = "You have completed all papers.";
+				}
+				
 
 			});
 		}
@@ -184,7 +190,7 @@ angular.module('htApp')
 			examStatus.emailId=emailId;
 			examStatus.examName=$scope.examName;
             examStatus.status=$scope.status;
-            console.log("email.....",examStatus);
+            console.log("examStatus.....",examStatus);
             examStatusFact.saveStatus(examStatus).then(function(data){
             	$location.path('/result/'+$scope.marks+'/'+$scope.examName);
 

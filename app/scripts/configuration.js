@@ -19,7 +19,19 @@
         "getPaper": "/getPaper",
         "viewPaper": "/viewPaper",
         "qpId": "/qpId",
-        "examStatus": "/examStatus"
+        "examStatus": "/examStatus",
+        "rrbPaper": "/rrbPaper",
+        "sscPaper": "/sscPaper",
+        "gatePaper": "/gatePaper",
+        "bankPaper": "/bankPaper",
+        "rrbId": "/rrbId",
+        "rrbview": "/rrbview",
+        "sscId": "/sscId",
+        "sscview": "/sscview",
+        "gateId": "/gateId",
+        "gateview": "/gateview",
+        "bankId": "/bankId",
+        "bankview": "/bankview"
       },
       "qPresence": {
         "presence": "/presence"
