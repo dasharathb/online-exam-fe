@@ -3,11 +3,11 @@
  angular.module("config", [])
 
 .constant("ENV", {
-  "name": "local",
+  "name": "development",
   "debug": true,
   "services": {
     "uri": {
-      "online": "http://localhost:9030/online-exam-server",
+      "online": "http://192.168.1.7:9030/online-exam-server",
       "qPresence": "https://presence.q.att.com"
     },
     "endpoints": {

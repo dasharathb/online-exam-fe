@@ -24,11 +24,12 @@ module.exports = function (grunt) {
     warDist: 'war',
     dateTime: new Date().getTime(),
     local: {
-      serviceBE: 'http://localhost:9030/online-exam-server',
+      serviceBE: 'http://192.168.1.7:9030/online-exam-server',
+      //serviceBE:'192.168.1.7',
       serviceQURI: 'https://presence.q.att.com'
     },
     dev: {
-      serviceBE: '/online-exam-server', //need service uri for future plans
+      serviceBE: 'http://192.168.1.7:9030/online-exam-server', //need service uri for future plans
       serviceQURI: 'https://presence.q.att.com'
     },
     qa: {
@@ -88,7 +89,7 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: 'localhost',
+        hostname: '192.168.1.7',
         livereload: 35729
       },
       livereload: {

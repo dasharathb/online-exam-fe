@@ -8,20 +8,6 @@ angular.module('htApp')
 		var defer = $q.defer();
 		var serviceURI = getServiceURI.build('online', 'login');
 		console.log('serviceURI',serviceURI);
-		//var serviceURI = "./../../json/login.json";
-
-		/*$http({
-				method: 'GET',
-				url: serviceURI
-			}).then(function(data){
-				defer.resolve(data.data);
-			},
-			 function(failedReason){
-			 	defer.reject(failedReason);
-			});
-					
-			return defer.promise;
-		};*/
 
 			$http({
 				method: 'GET',

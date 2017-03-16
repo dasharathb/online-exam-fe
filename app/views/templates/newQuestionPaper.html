@@ -1,4 +1,4 @@
-<div class="row" style="background:#E0F574">
+<div class="row" style="background:#E0F574;position: relative;z-index: 1;">
     <home-menu is-admin="{{isAdmin}}"></home-menu>
 </div>
 <center><div style="margin-top: 31px;color: blue;font-size: xx-large;">{{paperName}} Paper</div></center>
@@ -19,10 +19,11 @@
 			   <input type="radio" name="r1" ng-model="rrb" value="SSC">SSC
 			   <input type="radio" name="r1" ng-model="rrb" value="GATE">GATE
 			   <input type="radio" name="r1" ng-model="rrb" value="BANK">BANK
-			   	
-
+			   <div>
+			     Time Duration:<input type="text" name="time duration" ng-model="duration">
+               </div>
 			   </div>
-		  		<div><label>Q:</label><textarea style="width: 98%;height: 66px" ng-model="question" id="textId"></textarea></div>
+		  		<div><label>Q:</label><textarea style="width: 98%;height: 66px;margin-top:5px" ng-model="question" id="textId"></textarea></div>
 		  		<div><label style="margin-top: 16px;">Options:</label></div>
 		  		<div style="margin-left: 89px;"><label>A:</label><textarea style="padding-left: 83px;width: 43%;height: 26px;" ng-model="a" id="textId1"></textarea></div>
 		  		<div  style="margin-left: 89px;margin-top: 10px;"><label>B:</label><textarea style="padding-left: 83px;width: 43%;height: 26px;" ng-model="b" id="textId2"></textarea></div>

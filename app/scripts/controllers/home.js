@@ -8,9 +8,11 @@ angular.module('htApp')
 		$scope.question = 0;
 		$scope.marks= 0;
 		$scope.ans = undefined;
-$scope.examName;
-		$scope.mins = 10;
+		$scope.examName;
+		$scope.mins=10;
+		console.log("min::::",$scope.mins);
 		$scope.hrs=60;
+		 var login ={};
         
         var stop;
         $scope.min = function() {
@@ -22,25 +24,11 @@ $scope.examName;
               $scope.mins = $scope.mins - 1;             
             } else {
               $scope.stopFight();
+              $scope.submit();
             }
           }, 60000);
         };
         $scope.min();
-
-        $scope.hour = function() {
-          // Don't start a new fight if we are already fighting
-          if ( angular.isDefined(stop) ) return;
-
-          stop = $interval(function() {
-            if ($scope.hrs > 0 ) {
-              $scope.hrs = $scope.hrs - 1;             
-            } else {
-              $scope.stopFight();
-            }
-          }, 60000);
-        };
-        $scope.hour();
-        
 
 
         $scope.stopFight = function() {
@@ -56,7 +44,12 @@ $scope.examName;
 				if(data != "" ){
 					$scope.questionPapers = data;
 				$scope.examName = $scope.questionPapers.id;
+				$scope.duration=$scope.questionPapers.duration;
+				$scope.mins=$scope.duration;
+
+				console.log("duration......",$scope.examName,$scope.mins);
 				console.log("questionPapers.......",$scope.questionPapers);
+
 				$scope.question = 0;
 				$scope.questionPaper = $scope.questionPapers.questions[$scope.question];
 				console.log("getExamPaper...........",$scope.questionPaper);	
@@ -65,9 +58,8 @@ $scope.examName;
 					$scope.message = "You have completed all papers.";
 				}
 				
-
-			});
-		}
+             });
+	  }
 		$scope.qnoButtons = function(qno){
 			console.log('this is answer button',qno);
 			$scope.questionPaper = $scope.questionPapers.questions[qno-1];
@@ -203,6 +195,7 @@ $scope.examName;
 
 		$scope.init = function(){
 			$scope.getExamPaper();
+
 		}
 		$scope.init();
 	}]);

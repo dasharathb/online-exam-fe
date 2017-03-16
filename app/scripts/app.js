@@ -80,26 +80,6 @@ angular.module('htApp', [
         controller: 'resultCntrl',
             
         })
-           .when('/rrbPaper/:paper', {
-        templateUrl: 'views/templates/rrbPaper.html',
-        controller: 'rrbCntrl',
-            
-        })
-            .when('/sscPaper/:paper', {
-        templateUrl: 'views/templates/sscPaper.html',
-        controller: 'sscCntrl',
-            
-        })
-             .when('/gatePaper/:paper', {
-        templateUrl: 'views/templates/gatePaper.html',
-        controller: 'gateCntrl',
-            
-        })
-              .when('/bankPaper/:paper', {
-        templateUrl: 'views/templates/bankPaper.html',
-        controller: 'bankCntrl',
-            
-        })
         .when('/rrbId', {
         templateUrl: 'views/templates/rrbId.html',
         controller: 'rrbIdCntrl',

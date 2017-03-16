@@ -9,19 +9,19 @@
       </div> 
       <div class="" style="background-color: #cccccc;">
         <span class="pull-left">Section</span>
-        <span class="pull-right">Time Lift:
+        <span class="pull-right" style="padding-right: 100px;">Time Lift:
 
-       <timer interval="1000">{{hours}} hour{{hoursS}}, {{minutes}} minute{{minutesS}}, {{seconds}} second{{secondsS}}.{{hrs}} {{mins}}</timer>
+       <timer interval="1000"> {{mins}}</timer>
         </span>
       </div>
       <div class="" style="border: 1px solid #c0c0c0; clear:both;">
-            <mor-menu> </mor-menu>
+           <!-- <mor-menu> </mor-menu>-->
       </div>
     <div class="" style="background-color:#fff">
       <div id="leftPan" class="pull-left" style="width:78%;">
           <div class="" style="height: 1.5em;">
             <div class="pull-left" style="color: red;font-size: 12px;">Question Type:MCQ</div>
-            <div class="pull-right" style="font-size: 12px; padding-left: 135px;">Mark for correct answer 1 | Negative answer 0.33</div>  
+            <div class="pull-right" style="font-size: 12px; padding-left: 135px;">Mark for correct answer 1 </div>  
           </div>          
           <div class="" style="background-color:#85C1E9;height: 1.5em;"></div>
           <center>{{message}}</center>
@@ -72,33 +72,33 @@
       </div>
       <div ng-show="questionPaper" id="rightPan" class="pull-right" style="width:20%;" >
           <div class="text-center">
-            <img src="images/gana.jpg" height="100" width="100">  
+            <img src="images/blank-avatar.png" height="100" width="100" style="margin-top: 5px;">  
           </div>          
           <div class="text-center">
-            <label>Bhookya Ganapathi</label>
+            <label>{{firstName}}{{lastName}}</label>
           </div>
-            <div class="disp_inline">
-                <div >
+            <div class="disp_inline" >
+                <div style="display: inline-flex;">
                   <span class="status-boxs ans-box"></span>
-                  <span>Answered</span> 
-                </div>
-                <div >
+                  <span>Answered</span>
+                 </div>
+                <div  style="display: inline-flex;margin-left: 7px;">
                   <span class="status-boxs notans-box"></span>
                   <span>Not Answered</span> 
                 </div>
             </div>
             <div class="disp_inline">   
-                <div class="" >
+                <div  style="display: inline-flex;">
                   <span class="status-boxs not-visited-box"></span>
                   <span>Not Visited</span>
                 </div>
-                <div class="">
+                <div style="display: inline-flex;">
                   <span class="status-boxs review-box"></span>
                   <span>Marked for Review</span>
                 </div>
             </div>
             <div class="disp_inline">
-              <div class="">
+              <div style="display: inline-flex;">
                 <span class="status-boxs ans-review-box"></span>
                 <span class="">Answered & Marked for Review</span>
               </div>

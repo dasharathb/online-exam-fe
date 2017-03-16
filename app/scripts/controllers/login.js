@@ -30,6 +30,9 @@ angular.module('htApp')
 		loginFact.getLoginDetails(login).then(function(data){
 			console.log('controller data ::::: ',data);
 			$scope.loginDetails= data;
+
+			$rootScope.firstName=$scope.loginDetails.firstName;
+			$rootScope.lastName=$scope.loginDetails.lastName;
 			$rootScope.isAdmin = data.isAdmin;
 			if($rootScope.fromGotoExm == true){
 				$location.path('/exam');

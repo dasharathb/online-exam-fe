@@ -43,6 +43,8 @@ angular.module('htApp')
       	console.log('all questions....',$scope.questions);
       	var questionPaper = {};
       	questionPaper.questions = $scope.questions;
+      	questionPaper.duration = $scope.duration;
+      	console.log(":::::duration",questionPaper);
       	$('#confirmModal').modal('hide');
       	qPaperFact.saveQuestionPaper(questionPaper,$scope.rrb).then(function(data){
       		console.log('questions controller.....',data);
